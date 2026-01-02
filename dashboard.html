@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a class="brand-link" href="dashboard.html">
+        <span class="brand-logo"></span>
+        Student Platform
+      </a>
+
+      <nav class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="subject.html">Predmeti</a>
+        <a href="exam-register.html">Prijava ispita</a>
+        <a href="../php/logout.php">Logout</a>
+      </nav>
+
+      <span class="btn" style="cursor:default; opacity:.9;">
+        <span id="studentName">Student</span>
+      </span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-heading">Dobrodošli, <span id="studentName2">Student</span></h1>
+
+    <div class="grid grid-2 section">
+      <div class="card stat-card">
+        <div class="stat-value" id="examCount">0</div>
+        <div class="stat-label">Broj prijavljenih ispita</div>
+      </div>
+
+      <div class="card card-pad">
+        <div class="section-header">
+          <h2>Nadolazeći ispiti</h2>
+        </div>
+        <ul id="upcomingExams" style="margin: 0 0 0 18px;"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/dashboard.js"></script>
+  <script>
+    // da se ime prikaže i u headeru i u naslovu
+    const nameEl = document.getElementById("studentName");
+    const nameEl2 = document.getElementById("studentName2");
+    const obs = new MutationObserver(() => { nameEl2.textContent = nameEl.textContent; });
+    obs.observe(nameEl, { childList: true });
+  </script>
+
+</body>
+</html>
