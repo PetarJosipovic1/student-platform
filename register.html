@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Platform | Registracija</title>
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+</head>
+
+<body>
+<header class="header">
+  <div class="nav-container">
+    <a class="brand-link" href="index.html">
+      <div class="brand-logo"></div>
+      <span>Student Platform</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Početna</a>
+      <a href="login.html">Prijava</a>
+      <a href="register.html">Registracija</a>
+    </nav>
+
+    <a class="btn" href="login.html">Prijava</a>
+  </div>
+</header>
+
+<main class="container page-top">
+  <div class="card card-pad auth-card">
+    <h1 class="auth-title">Registracija</h1>
+    <p class="helper auth-desc">Kreiraj nalog za pristup platformi.</p>
+
+    <form class="form" action="../php/register.php" method="post">
+      <div class="field">
+        <label for="full_name">Ime i prezime</label>
+        <input class="input" id="full_name" name="full_name" type="text" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input class="input" id="email" name="email" type="email" required>
+      </div>
+
+      <div class="field">
+        <label for="pass">Lozinka</label>
+        <input class="input" id="pass" name="pass" type="password" required>
+        <div class="helper">Minimum 8 karaktera</div>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Registruj se</button>
+
+      <div class="helper">
+        Već imaš nalog?
+        <a href="login.html" style="text-decoration:underline;">Prijavi se</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">© <span id="year"></span> Student Platform</div>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="../js/auth.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Platform</title>
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <div class="brand-logo"></div>
+        <span>Student Platform</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Početna</a>
+        <a href="login.html">Prijava</a>
+        <a href="dashboard.html">Tabla</a>
+      </nav>
+
+      <a class="btn btn-primary" href="login.html">Prijavi se</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-section">
+      <div class="card card-pad">
+        <h1>Digitalna platforma za upravljanje studentskim obavezama</h1>
+        <p>
+          Student Platform omogućava studentima centralizovan pristup predmetima, rasporedu i prijavi ispita.
+          Sistem je dizajniran sa fokusom na jednostavno korisničko iskustvo, preglednost i responzivan dizajn.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="login.html">Kreni odmah</a>
+          <a class="btn" href="dashboard.html">Pogledaj tablu</a>
+        </div>
+
+        <div class="tech-badges">
+          <div class="tech-badge">HTML + CSS</div>
+          <div class="tech-badge">JavaScript</div>
+          <div class="tech-badge">PHP + MySQL</div>
+          <div class="tech-badge">Responsive</div>
+        </div>
+      </div>
+
+      <aside class="card card-pad">
+        <div class="section-header">
+          <h2>Šta dobijaš</h2>
+        </div>
+
+        <div class="grid">
+          <div class="feature-card card">
+            <div class="card-pad">
+              <h3>Moderan i pregledan interfejs</h3>
+              <p>
+                Korisnički interfejs je osmišljen po uzoru na stvarne studentske informacione sisteme,
+                sa jasnom navigacijom i doslednim dizajnom.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card card">
+            <div class="card-pad">
+              <h3>Skalabilna struktura aplikacije</h3>
+              <p>
+                Aplikacija je organizovana modularno, što omogućava jednostavno proširenje funkcionalnosti
+                i integraciju sa serverskom logikom i bazom podataka.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Osnovne funkcionalnosti sistema</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card feature-card">
+          <h3>Upravljanje predmetima</h3>
+          <p>
+            Prikaz predmeta koje student pohađa, sa informacijama kao što su naziv,
+            broj ESPB bodova i odgovorni nastavnik.
+          </p>
+        </div>
+
+        <div class="card feature-card">
+          <h3>Pregled rasporeda nastave</h3>
+          <p>
+            Centralizovani pregled termina predavanja i vežbi, organizovan po danima,
+            radi lakšeg planiranja studentskih obaveza.
+          </p>
+        </div>
+
+        <div class="card feature-card">
+          <h3>Elektronska prijava ispita</h3>
+          <p>
+            Prijava ispita putem forme uz validaciju unosa i kasniju obradu podataka u sistemu.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Student Platform — Web aplikacija za upravljanje studentskim obavezama
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
