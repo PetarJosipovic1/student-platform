@@ -11,3 +11,9 @@ Simple web application built using HTML, CSS and JavaScript.
 - HTML
 - CSS
 - JavaScript
+
+🔗 Live demo (front-end): https://petarjosipovic1.github.io/student-platform/
+
+⚠️ Backend note:
+Authentication and database features are implemented with PHP + MySQL
+and are available when running the project locally (e.g. via XAMPP).
